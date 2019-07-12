@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改别墅样式表</title>
+    <style>
+        .form-group{
+            margin-left: 50px;
+        }
+        .text-center{
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="col-md-12 col-xs-12 login-blocks">
+    <h3>修改样式: </h3>
+    <form action="" method="post">
+         {% csrf_token %}
+
+        <br>
+{#        <div class="form-group">#}
+{#            <label for="id">id</label><br>#}
+{#            <input type="text" class="form-control" id="id" name="id">#}
+{#        </div>#}
+                <div class="form-group">
+            <label for="bedroom">浴室:</label><br>
+            <input type="text" class="form-control" id="bedroom" name="bedroom">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="garage">车库:</label><br>
+            <input type="text" class="form-control" id="garage" name="garage">
+        </div>
+        <div class="form-group">
+            <label for="bathroom">卧室:</label><br>
+            <input type="text" class="form-control" id="bathroom" name="bathroom">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="washhouse">洗衣房:</label><br>
+            <input type="text" class="form-control" id="washhouse" name="washhouse">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="bikeway">自行车道:</label><br>
+            <input type="text" class="form-control" id="bikeway" name="bikeway">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="swimming">游泳池:</label><br>
+            <input type="text" class="form-control" id="swimming" name="swimming">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="lawn">草坪:</label><br>
+            <input type="text" class="form-control" id="lawn" name="lawn">
+        </div>
+        <br>
+        <div class="text-center" href="{% url 'admin:index1'%}">
+            <button type="submit" class="btn btn-default">保存</button>
+            <a href="{% url 'admin:index1'%}" type="submit" class="btn btn-default">返回</a>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

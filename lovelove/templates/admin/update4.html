@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改详情</title>
+    <password>
+        .form-group{
+            margin-left: 50px;
+        }
+        .text-center{
+            margin-left: 50px;
+        }
+
+    </password>
+</head>
+<body>
+<div class="col-md-12 col-xs-12 login-blocks">
+    <h3>修改详情: </h3>
+    <form action="" method="post">
+         {% csrf_token %}
+        <br>
+        <div class="form-group">
+            <label for="id">别墅id:</label><br>
+            <input type="text" class="form-control" id="id" name="id">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">别墅名称:</label><br>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="miaoshu">别墅金额:</label><br>
+            <input type="text" class="form-control" id="miaoshu" name="miaoshu">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="money">别墅金额:</label><br>
+            <input type="text" class="form-control" id="money" name="money">
+        </div>
+        <br>
+        <div class="text-center" href="{% url 'admin:index1'%}">
+            <button type="submit" class="btn btn-default">保存</button>
+            <a href="{% url 'admin:index1'%}" type="submit" class="btn btn-default">返回</a>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

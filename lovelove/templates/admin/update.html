@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改别墅</title>
+    <style>
+        .form-group{
+            margin-left: 50px;
+        }
+        .text-center{
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="col-md-12 col-xs-12 login-blocks">
+    <h3>修改别墅: </h3>
+    <form action="" method="post">
+         {% csrf_token %}
+
+        <br>
+        <div class="form-group">
+            <label for="username">别墅名称:</label><br>
+            <input type="text" class="form-control" id="name" name="name" value="{{ uid.name }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="money">金额:</label><br>
+            <input type="text" class="form-control" id="money" name="money" value="{{ uid.money }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="area">面积:</label><br>
+            <input type="text" class="form-control" id="area" name="area" value="{{ uid.area }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="weivilla_photo">图片:</label><br>
+            <input type="text" class="form-control" id="weivilla_photo" name="weivilla_photo" value="{{ uid.weivilla_photo }}">
+        </div>
+        <br>
+        <div class="text-center" href="{% url 'admin:index1'%}">
+            <button type="submit" class="btn btn-default">保存</button>
+            <a href="{% url 'admin:index1'%}" type="submit" class="btn btn-default">返回</a>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

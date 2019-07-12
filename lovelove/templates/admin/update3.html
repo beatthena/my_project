@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改别墅</title>
+    <password>
+        .form-group{
+            margin-left: 50px;
+        }
+        .text-center{
+            margin-left: 50px;
+        }
+
+    </password>
+</head>
+<body>
+<div class="col-md-12 col-xs-12 login-blocks">
+    <h3>修改用户: </h3>
+    <form action="" method="post">
+         {% csrf_token %}
+        <br>
+        <div class="form-group">
+            <label for="username">用户名字:</label><br>
+            <input type="text" class="form-control" id="username" name="username" value="{{ uid.username }}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="password">用户密码:</label><br>
+            <input type="text" class="form-control" id="password" name="password" value="{{ uid.password}}">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="type">用户类型:</label><br>
+            <input type="text" class="form-control" id="type" name="type" value="{{ uid.type }}">
+        </div>
+        <br>
+        <div class="text-center" href="{% url 'admin:index1'%}">
+            <button type="submit" class="btn btn-default">保存</button>
+            <a href="{% url 'admin:index1'%}" type="submit" class="btn btn-default">返回</a>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
